@@ -13,7 +13,7 @@
 
 .SearchBar input{
     width: 100%;
-    height: 100%;
+    height: auto;
     border: none;
     padding: 15px 10px;
 }
