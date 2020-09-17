@@ -10,6 +10,7 @@
     width: 75%;
     margin: auto;
     font-size: 1em;
+    z-index: 200;
 }
 
 .Dropdown .Label{

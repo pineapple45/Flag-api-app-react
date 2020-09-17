@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Aux from '../../../Auxilliary/Auxilliary';
+import Backdrop from '../Backdrop/Backdrop';
 import classes from './Dropdown.module.css';
 const Dropdown = () => {
     const [isActive, setActive] = useState(false)
@@ -9,6 +10,11 @@ const Dropdown = () => {
     }
 
     return(
+        <Aux>
+        <Backdrop 
+        show={isActive} 
+        clicked={toggleDropDown}    
+        />
         <div onClick={toggleDropDown} className={classes.Dropdown}>
             <div className={classes.Label}>
                 <p>Filter by Region</p>
@@ -26,6 +32,7 @@ const Dropdown = () => {
                 </ul>
             </div>
         </div>
+        </Aux>
     )    
 }
 
