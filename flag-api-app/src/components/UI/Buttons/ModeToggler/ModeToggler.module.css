@@ -1,0 +1,12 @@
+.ModeToggler{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px; */
+    cursor: pointer;
+}
+
+.ModeToggler i {
+    margin-right: 5px;
+}
