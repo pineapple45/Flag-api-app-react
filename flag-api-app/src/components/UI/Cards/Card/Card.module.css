@@ -5,10 +5,20 @@
   /* grid-column: 1 / 13; */
 
 .div {
+  /* width: auto;
+  height: auto; */
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center; */
+  margin: 20px;
+  border: 1px solid black;
+
   height: 50vh;
   width: 30vh;
-  border: 1px solid black;
-  margin: 20px;
+  /* border: 1px solid black;
+  margin: 20px;  */
 }
 
 .img {
