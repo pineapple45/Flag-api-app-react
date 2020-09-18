@@ -1,21 +1,21 @@
-.Nav{
-    background-color: white;
-    grid-column: 1 / 13;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    justify-content: space-between;
-    box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
+.Nav {
+  background-color: #ffffff;
+  grid-column: 1 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
 }
 
-.Nav .H2{
-    margin-left: 5%;
-    font-size: 1em;
-    font-weight: bold;
+.Nav .H2 {
+  margin-left: 5%;
+  font-size: 1em;
+  font-weight: bold;
 }
 
-.Nav .Toggler{
-    margin-right: 5%;
-    padding: 0 20px;
-    font-size: 0.8em;
+.Nav .Toggler {
+  margin-right: 5%;
+  padding: 0 20px;
+  font-size: 0.8em;
 }
