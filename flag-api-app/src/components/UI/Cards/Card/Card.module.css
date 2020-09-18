@@ -4,14 +4,19 @@
   grid-template-rows: 1fr 1fr;
   /* grid-column: 1 / 13; */
 
-.div {
-  height: 50vh;
-  width: 30vh;
+.Card {
+  height: auto;
+  width: 75vw;
   border: 1px solid black;
   margin: 20px;
 }
 
-.img {
+.Card .CardBody{
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Card .img {
   height: 50%;
   width: 100%;
   vertical-align: top;

@@ -1,5 +1,4 @@
-.grid {
-  margin-top: 5vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.Cards {
+  margin: 5vh auto;
+  grid-column: 1 / 13;
 }

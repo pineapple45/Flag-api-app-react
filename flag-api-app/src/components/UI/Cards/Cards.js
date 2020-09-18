@@ -35,7 +35,7 @@ class Cards extends Component {
 
   render() {
     return (
-      <div className={classes.grid}>
+      <div className={classes.Cards}>
         {this.state.countries.map((country) => (
           <Card country={country} key={country.name} />
         ))}
