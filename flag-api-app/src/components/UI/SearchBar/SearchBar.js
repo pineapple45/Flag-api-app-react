@@ -12,7 +12,7 @@ const SearchBar = (props) => {
       <i className="fas fa-search"></i>
       <input 
       type="text" 
-      placeholder="Search for a country..." 
+      placeholder="Search for a country/capital/region..." 
       onChange= {(e) => onChangeHandler(e)}
       value = {props.value}
       />
