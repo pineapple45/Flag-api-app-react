@@ -10,12 +10,12 @@ const Dropdown = (props) => {
     setActive(!isActive);
   };
 
-  function selectRegion(region) {
-    console.log(region);
-    // document.getElementById("filter_value").innerHTML = region;
-    props.handler(region);
-    //console.log(props.countries);
-  }
+//   function selectRegion(region) {
+//     console.log(region);
+//     // document.getElementById("filter_value").innerHTML = region;
+//     props.handler(region);
+//     //console.log(props.countries);
+//   }
 
   return (
     <Aux>
@@ -30,11 +30,11 @@ const Dropdown = (props) => {
           style={{ display: isActive ? "block" : "none" }}
         >
           <ul>
-            <li onClick={() => selectRegion("Africa")}>Africa</li>
-            <li onClick={() => selectRegion("Americas")}>Americas</li>
-            <li onClick={() => selectRegion("Asia")}>Asia</li>
-            <li onClick={() => selectRegion("Europe")}>Europe</li>
-            <li onClick={() => selectRegion("Oceania")}>Oceania</li>
+            <li onClick={() => props.handleFiltering("Africa")}>Africa</li>
+            <li onClick={() => props.handleFiltering("Americas")}>Americas</li>
+            <li onClick={() => props.handleFiltering("Asia")}>Asia</li>
+            <li onClick={() => props.handleFiltering("Europe")}>Europe</li>
+            <li onClick={() => props.handleFiltering("Oceania")}>Oceania</li>
           </ul>
         </div>
       </div>

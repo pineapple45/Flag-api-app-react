@@ -1,11 +1,21 @@
 import React from "react";
-// import Aux from '../../../Auxilliary/Auxilliary';
 import classes from "./SearchBar.module.css";
-const SearchBar = () => {
+const SearchBar = (props) => {
+
+  const onChangeHandler = (e) => {
+    const inputText = e.target.value.toLowerCase();
+    props.handleInputSearch(inputText);
+  }
+
   return (
     <div className={classes.SearchBar}>
       <i className="fas fa-search"></i>
-      <input type="text" placeholder="Search for a country..." />
+      <input 
+      type="text" 
+      placeholder="Search for a country..." 
+      onChange= {(e) => onChangeHandler(e)}
+      value = {props.value}
+      />
     </div>
   );
 };

@@ -3,20 +3,27 @@ import SearchBar from "../../components/UI/SearchBar/SearchBar";
 import DropDown from "../../components/UI/Dropdown/Dropdown";
 import Aux from "../../Auxilliary/Auxilliary";
 import Cards from "../../components/UI/Cards/Cards";
-class Home extends React.Component {
+class Home extends Component {
   constructor(props) {
     super(props);
-    this.handler = this.handler.bind(this);
-
     this.state = {
       countries: [],
       filteredCountries: [],
     };
   }
-
-  handler(region) {
+  
+  handleInputSearch = (inputText) => {
     this.setState((prevState) => {
-      //let countries = prevState.countries;
+      return {
+        filteredCountries: prevState.countries.filter(
+          (x) =>( x.name.toLowerCase().indexOf(inputText) !== -1 || x.region.toLowerCase().indexOf(inputText) !== -1 || x.capital.toLowerCase().indexOf(inputText) !== -1)
+        ),
+      };
+    });
+  }
+
+  handleFiltering = (region) => {
+    this.setState((prevState) => {
       return {
         filteredCountries: prevState.countries.filter(
           (x) => x.region === region
@@ -43,8 +50,8 @@ class Home extends React.Component {
   render() {
     return (
       <Aux>
-        <SearchBar />
-        <DropDown countries={this.state.filteredCountries} handler={this.handler} />
+        <SearchBar handleInputSearch={this.handleInputSearch}/>
+        <DropDown handleFiltering={this.handleFiltering} />
         <Cards countries={this.state.filteredCountries} />
       </Aux>
     );
