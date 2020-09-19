@@ -7,11 +7,13 @@
 .Card {
   height: auto;
   width: 75vw;
-  border: 1px solid black;
-  margin: 20px;
+  /* border: 1px solid black; */
+  padding-bottom: 2vh;
+  margin: 7vh;
+  box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
 }
 
-.Card .CardBody{
+.Card .CardBody {
   text-align: left;
   padding-left: 20px;
 }
@@ -20,4 +22,12 @@
   height: 50%;
   width: 100%;
   vertical-align: top;
+}
+
+.span {
+  opacity: 0.5;
+}
+
+.span1 {
+  opacity: 0.8;
 }
