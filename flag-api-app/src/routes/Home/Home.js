@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import SearchBar from "../../components/UI/SearchBar/SearchBar";
 import DropDown from "../../components/UI/Dropdown/Dropdown";
 import Aux from "../../Auxilliary/Auxilliary";
@@ -8,6 +8,7 @@ class Home extends React.Component {
     super(props);
     this.handler = this.handler.bind(this);
 
+<<<<<<< HEAD
     this.state = {
       countries: [],
       filteredCountries: [],
@@ -51,4 +52,45 @@ class Home extends React.Component {
   }
 }
 
+=======
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      countries: [],
+    };
+  }
+
+  //http get request will be handled here
+  componentDidMount() {
+    console.log("CARDS CALLED");
+    fetch("https://restcountries.eu/rest/v2/all")
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState(() => {
+          return {
+            countries: data,
+          };
+        });
+      });
+  }
+
+  selectedCountry = (country) => {
+
+  }
+
+
+  render(){
+    return (
+      <Aux>
+        <SearchBar />
+        <DropDown selectedCountry={this.selectedCountry}/>
+        <Cards countries={this.state.countries}/>
+      </Aux>
+    );
+  }
+
+};
+
+>>>>>>> 36bfb5ce91935173d6ad9d39f23558a8ba8b6778
 export default Home;
