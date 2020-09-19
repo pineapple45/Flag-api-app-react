@@ -1,3 +1,27 @@
 .CountryData{
     grid-column: 1 / 13;
 }
+
+.CountryData img {
+    width: 80%;
+    height: auto;
+}
+
+.CountryData .Body{
+    margin: 40px 50px;
+    text-align: left;
+}
+
+.CountryData .cardBodyHeading{
+    color: hsl(207, 26%, 17%);
+}
+  
+.CountryData .Val {
+    color: hsl(207, 26%, 17%);
+    opacity: 0.7;
+}
+  
+.CountryData .Key {
+    color: hsl(207, 26%, 17%);
+}
+  

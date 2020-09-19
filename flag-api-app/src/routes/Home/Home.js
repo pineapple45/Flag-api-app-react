@@ -36,7 +36,6 @@ class Home extends Component {
 
   //http get request will be handled here
   componentDidMount() {
-    console.log("CARDS CALLED");
     fetch("https://restcountries.eu/rest/v2/all")
       .then((res) => res.json())
       .then((data) => {

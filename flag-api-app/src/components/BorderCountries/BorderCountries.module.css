@@ -1,3 +1,10 @@
 .BorderCountries{
     grid-column: 1 / 13;
+    text-align: left;
+    margin: 0 50px;
+    margin-bottom: 20px;
+}
+
+.BorderCountries h3{
+    font-size: 1em;
 }

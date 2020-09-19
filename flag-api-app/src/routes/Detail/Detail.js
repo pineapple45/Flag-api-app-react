@@ -3,6 +3,7 @@ import Aux from '../../Auxilliary/Auxilliary';
 import BackButton from '../../components/UI/Buttons/BackButton/BackButton';
 import CountryData from '../../components/CountryData/CountryData';
 import BorderCountries from '../../components/BorderCountries/BorderCountries';
+import Loader from '../../components/UI/Loader/Loader';
 
 class Detail extends Component {
 
@@ -23,7 +24,7 @@ class Detail extends Component {
 
     render(){
         // const countryName = this.props.match.params.name;
-        let loadedData = <div>Loading...</div>
+        let loadedData = <Loader />
         if(this.state.countryData !== null){
             loadedData = (<Aux>
                 <CountryData countryData = {this.state.countryData}/>

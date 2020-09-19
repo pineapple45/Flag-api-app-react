@@ -1,10 +1,12 @@
 import React from 'react';
+import classes from './CountryTab.module.css';
+import { Link } from 'react-router-dom';
 
 const countryTab = (props) => {
     return (
-        <div>
+        <Link className={classes.CountryTab}>
             {props.country}
-        </div>
+        </Link>
     )
 }
 

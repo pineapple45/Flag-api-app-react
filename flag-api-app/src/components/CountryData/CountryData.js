@@ -16,11 +16,11 @@ class countryData extends Component{
             src={this.props.countryData.flag}
             className={classes.img}
             />
-            <div className={classes.CardBody}>
+            <div className={classes.Body}>
                 <h2 className={classes.cardBodyHeading}>{this.props.countryData.name}</h2>
                 <h5>
                     <span className={classes.Key}>Native Name: </span>
-                    <span className={classes.Val}>{this.props.countryData.nativename}</span>
+                    <span className={classes.Val}>{this.props.countryData.nativeName}</span>
                 </h5>
                 <h5>
                     <span className={classes.Key}>Population: </span>
