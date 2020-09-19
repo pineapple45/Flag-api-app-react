@@ -18,7 +18,7 @@ class Home extends React.Component {
     this.setState((prevState) => {
       //let countries = prevState.countries;
       return {
-        countries: prevState.filteredCountries.filter(
+        filteredCountries: prevState.countries.filter(
           (x) => x.region === region
         ),
       };
@@ -44,8 +44,8 @@ class Home extends React.Component {
     return (
       <Aux>
         <SearchBar />
-        <DropDown countries={this.state.countries} handler={this.handler} />
-        <Cards countries={this.state.countries} />
+        <DropDown countries={this.state.filteredCountries} handler={this.handler} />
+        <Cards countries={this.state.filteredCountries} />
       </Aux>
     );
   }

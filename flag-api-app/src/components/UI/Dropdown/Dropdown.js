@@ -12,7 +12,7 @@ const Dropdown = (props) => {
 
   function selectRegion(region) {
     console.log(region);
-    document.getElementById("filter_value").innerHTML = region;
+    // document.getElementById("filter_value").innerHTML = region;
     props.handler(region);
     //console.log(props.countries);
   }
