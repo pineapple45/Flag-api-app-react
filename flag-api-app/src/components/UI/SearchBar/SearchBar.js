@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./SearchBar.module.css";
 const SearchBar = (props) => {
-
+  let inputText = null;
   const onChangeHandler = (e) => {
-    const inputText = e.target.value.toLowerCase();
+    inputText = e.target.value.toLowerCase();
     props.handleInputSearch(inputText);
   }
 
@@ -14,7 +14,7 @@ const SearchBar = (props) => {
       type="text" 
       placeholder="Search for a country/capital/region..." 
       onChange= {(e) => onChangeHandler(e)}
-      value = {props.value}
+      value = {inputText}
       />
     </div>
   );

@@ -5,6 +5,8 @@
   margin: 0 auto;
   box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
   grid-column: 1 / 13;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .Card .CardBody {
@@ -18,10 +20,15 @@
   vertical-align: top;
 }
 
+.Card .cardBodyHeading{
+  color: hsl(207, 26%, 17%);
+}
+
 .Card .Val {
-  opacity: 0.5;
+  color: hsl(207, 26%, 17%);
+  opacity: 0.7;
 }
 
 .Card .Key {
-  opacity: 0.8;
+  color: hsl(207, 26%, 17%);
 }

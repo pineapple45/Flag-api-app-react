@@ -16,7 +16,9 @@ class Home extends Component {
     this.setState((prevState) => {
       return {
         filteredCountries: prevState.countries.filter(
-          (x) =>( x.name.toLowerCase().indexOf(inputText) !== -1 || x.region.toLowerCase().indexOf(inputText) !== -1 || x.capital.toLowerCase().indexOf(inputText) !== -1)
+          (x) =>( x.name.toLowerCase().indexOf(inputText) !== -1 || 
+                  x.region.toLowerCase().indexOf(inputText) !== -1 || 
+                  x.capital.toLowerCase().indexOf(inputText) !== -1)
         ),
       };
     });
