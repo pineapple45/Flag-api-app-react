@@ -39,3 +39,45 @@
   padding: 5px;
   cursor: pointer;
 }
+
+.Dark {
+  grid-column: 1/13;
+  background-color: #2b3743;
+  /* padding: 0 10px; */
+  /* margin: 0 25%; */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 1px #2b3743;
+  max-width: 300px;
+  width: 75%;
+  margin: auto;
+  font-size: 1em;
+  z-index: 200;
+}
+
+.Dark .Label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.DarkSelection {
+  background-color: #2b3743;
+  border-radius: 5px;
+  width: 75%;
+  max-width: 300px;
+  margin: 5px auto;
+  position: absolute;
+  box-shadow: 0 2px 5px 1px #2b3743;
+}
+
+.DarkSelection ul {
+  list-style: none;
+  text-align: left;
+}
+
+.DarkSelection ul li {
+  padding: 5px;
+  cursor: pointer;
+}

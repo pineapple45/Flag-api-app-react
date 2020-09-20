@@ -1,15 +1,32 @@
-.BackButton{
-    grid-column: 1 / 13;
-    padding: 10px 0;
-    width: 120px;
-    margin: 40px 50px;
-    box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: hsl(0, 0%, 33%);
+.BackButton {
+  grid-column: 1 / 13;
+  padding: 10px 0;
+  width: 120px;
+  margin: 40px 50px;
+  box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: hsl(0, 0%, 33%);
 }
 
 .BackButton i {
-    margin-right: 10px;
+  margin-right: 10px;
+}
+
+.Dark {
+  grid-column: 1 / 13;
+  padding: 10px 0;
+  width: 120px;
+  margin: 40px 50px;
+  border: 1px solid hsl(0, 0%, 90%);
+  box-shadow: 0 1px 5px 0 #2b3743;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+}
+
+.Dark i {
+  margin-right: 10px;
 }

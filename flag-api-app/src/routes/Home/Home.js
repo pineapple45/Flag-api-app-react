@@ -11,18 +11,19 @@ class Home extends Component {
       filteredCountries: [],
     };
   }
-  
+
   handleInputSearch = (inputText) => {
     this.setState((prevState) => {
       return {
         filteredCountries: prevState.countries.filter(
-          (x) =>( x.name.toLowerCase().indexOf(inputText) !== -1 || 
-                  x.region.toLowerCase().indexOf(inputText) !== -1 || 
-                  x.capital.toLowerCase().indexOf(inputText) !== -1)
+          (x) =>
+            x.name.toLowerCase().indexOf(inputText) !== -1 ||
+            x.region.toLowerCase().indexOf(inputText) !== -1 ||
+            x.capital.toLowerCase().indexOf(inputText) !== -1
         ),
       };
     });
-  }
+  };
 
   handleFiltering = (region) => {
     this.setState((prevState) => {
@@ -32,7 +33,7 @@ class Home extends Component {
         ),
       };
     });
-  }
+  };
 
   //http get request will be handled here
   componentDidMount() {
@@ -51,9 +52,21 @@ class Home extends Component {
   render() {
     return (
       <Aux>
-        <SearchBar handleInputSearch={this.handleInputSearch}/>
-        <DropDown handleFiltering={this.handleFiltering} />
-        <Cards countries={this.state.filteredCountries} />
+        <SearchBar
+          Dark={this.props.Dark}
+          setDark={this.props.setDark}
+          handleInputSearch={this.handleInputSearch}
+        />
+        <DropDown
+          Dark={this.props.Dark}
+          setDark={this.props.setDark}
+          handleFiltering={this.handleFiltering}
+        />
+        <Cards
+          Dark={this.props.Dark}
+          setDark={this.props.setDark}
+          countries={this.state.filteredCountries}
+        />
       </Aux>
     );
   }
