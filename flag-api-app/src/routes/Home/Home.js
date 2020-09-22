@@ -33,6 +33,7 @@ class Home extends Component {
         ),
       };
     });
+    document.getElementById("filter_value").innerHTML = region;
   };
 
   //http get request will be handled here

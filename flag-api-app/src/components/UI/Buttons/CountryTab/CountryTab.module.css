@@ -1,15 +1,31 @@
-.CountryTab{
-    background-color: white;
-    font-size: 12px;
-    text-align: center;
-    padding: 5px 0;
-    width: 80px;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px 0 hsl(0, 0%, 75%);
-    margin: 20px 0;
-    margin-right: 10px;
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-    color: hsl(0, 0%, 33%);
+.CountryTab {
+  background-color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 0;
+  width: 80px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 hsl(0, 0%, 75%);
+  margin: 20px 0;
+  margin-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(0, 0%, 33%);
+}
+
+.DarkCountryTab {
+  background-color: #2b3743;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 0;
+  width: 80px;
+  border-radius: 2px;
+  /* box-shadow: 0 1px 3px 0 #2b3743; */
+  margin: 20px 0;
+  margin-right: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #eee;
 }

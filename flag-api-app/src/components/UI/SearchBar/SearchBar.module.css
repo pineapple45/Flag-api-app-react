@@ -30,7 +30,7 @@
   grid-column: 1 / 13;
   margin: 25px 5%;
   border: none;
-  box-shadow: 0 2px 5px 1px #2b3743;
+  /* box-shadow: 0 2px 5px 1px #2b3743; */
   border-radius: 5px;
   display: flex;
   justify-content: center;
