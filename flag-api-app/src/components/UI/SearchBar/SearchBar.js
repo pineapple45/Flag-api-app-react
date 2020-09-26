@@ -8,8 +8,11 @@ const SearchBar = (props) => {
     props.handleInputSearch(inputText);
   };
 
+  let classList = [classes.SearchBar];
+  props.Dark ? classList.push(classes.Dark) : classList = [classes.SearchBar]; 
+
   return (
-    <div className={props.Dark ? classes.Dark : classes.SearchBar}>
+    <div className={classList.join(' ')}>
       <i className="fas fa-search"></i>
       <input
         type="text"

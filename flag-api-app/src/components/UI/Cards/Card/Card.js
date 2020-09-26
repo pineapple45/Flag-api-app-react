@@ -7,46 +7,62 @@ const Card = (props) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  let classList = [classes.Card];
+  props.Dark ? classList.push(classes.Dark) : classList = [classes.Card];
+
+  let imgClassList = [classes.img];
+  props.Dark ? imgClassList.push(classes.Darkimg) : imgClassList = [classes.img];
+
+  let bodyClassList = [classes.CardBody];
+  props.Dark ? bodyClassList.push(classes.DarkCardBody) : bodyClassList = [classes.CardBody];
+
+  let headingClassList = [classes.CardBodyHeading];
+  props.Dark ? headingClassList.push(classes.DarkcardBodyHeading) : headingClassList = [classes.CardBodyHeading];
+
+  let valueClassList = [classes.Val];
+  props.Dark ? valueClassList.push(classes.DarkVal) : valueClassList = [classes.Val];
+
+  let keyClassList = [classes.Key];
+  props.Dark ? keyClassList.push(classes.DarkKey) : keyClassList = [classes.Key];
+
   return (
     <NavLink
       to={`/${props.country.name}`}
-      className={props.Dark ? classes.Dark : classes.Card}
+      className={classList.join(' ')}
     >
       <div>
         <img
           alt={props.country.name}
           src={props.country.flag}
-          className={props.Dark ? classes.Darkimg : classes.img}
+          className={classes.img}
         />
-        <div className={props.Dark ? classes.DarkCardBody : classes.CardBody}>
+        <div className={classes.CardBody}>
           <h4
-            className={
-              props.Dark ? classes.DarkcardBodyHeading : classes.cardBodyHeading
-            }
+            className={headingClassList.join(' ')}
           >
             {props.country.name}
           </h4>
           <h5>
-            <span className={props.Dark ? classes.DarkKey : classes.Key}>
+            <span className={keyClassList.join(' ')}>
               Population:{" "}
             </span>
-            <span className={props.Dark ? classes.DarkVal : classes.Val}>
+            <span className={valueClassList.join(' ')}>
               {numberWithCommas(props.country.population)}
             </span>{" "}
           </h5>
           <h5>
-            <span className={props.Dark ? classes.DarkKey : classes.Key}>
+            <span className={keyClassList.join(' ')}>
               Region:{" "}
             </span>
-            <span className={props.Dark ? classes.DarkVal : classes.Val}>
+            <span className={valueClassList.join(' ')}>
               {props.country.region}
             </span>
           </h5>
           <h5>
-            <span className={props.Dark ? classes.DarkKey : classes.Key}>
+            <span className={keyClassList.join(' ')}>
               Capital:{" "}
             </span>
-            <span className={props.Dark ? classes.DarkVal : classes.Val}>
+            <span className={valueClassList.join(' ')}>
               {props.country.capital}
             </span>
           </h5>

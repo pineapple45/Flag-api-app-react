@@ -20,7 +20,7 @@
   vertical-align: top;
 }
 
-.Card .cardBodyHeading {
+.Card .CardBodyHeading {
   color: hsl(207, 26%, 17%);
 }
 
@@ -35,26 +35,7 @@
 
 .Dark {
   background: #2b3743;
-
-  height: auto;
-  width: 75vw;
-  padding-bottom: 2vh;
-  margin: 0 auto;
   box-shadow: 0 1px 5px 0 #2b3743;
-  grid-column: 1 / 13;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.Dark .DarkCardBody {
-  text-align: left;
-  padding-left: 20px;
-}
-
-.Dark .Darkimg {
-  height: 50%;
-  width: 100%;
-  vertical-align: top;
 }
 
 .Dark .DarkcardBodyHeading {
@@ -68,4 +49,12 @@
 
 .Dark .DarkKey {
   color: hsl(0, 0%, 90%);
+}
+
+
+@media screen and (min-width: 720px){
+  .Card {
+    width: 18vw;
+    grid-column: span 3;
+  }
 }

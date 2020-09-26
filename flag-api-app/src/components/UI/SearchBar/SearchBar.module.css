@@ -27,26 +27,14 @@
 }
 
 .Dark {
-  grid-column: 1 / 13;
-  margin: 25px 5%;
-  border: none;
-  /* box-shadow: 0 2px 5px 1px #2b3743; */
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #2b3743;
   color: rgb(195, 195, 195);
+  box-shadow: 0 2px 5px 1px #2b3743;
 }
 
 .Dark input {
   color: rgb(195, 195, 195);
-
   background-color: #2b3743;
-  width: 100%;
-  height: auto;
-  border: none;
-  padding: 15px 10px;
 }
 
 .Dark i {
@@ -55,4 +43,14 @@
 
 input::placeholder {
   color: #c0c9d2;
+}
+
+@media screen and (min-width: 720px){
+  .SearchBar {
+  grid-column: 1 / 9;
+  margin: 25px 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 }
