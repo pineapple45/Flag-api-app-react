@@ -10,28 +10,25 @@ const Dropdown = (props) => {
     setActive(!isActive);
   };
 
-  //   function selectRegion(region) {
-  //     console.log(region);
-  //     // document.getElementById("filter_value").innerHTML = region;
-  //     props.handler(region);
-  //     //console.log(props.countries);
-  //   }
+  let classList = [classes.Dropdown];
+  props.Dark  ? classList.push(classes.Dark) : classList = [classes.Dropdown];
+
+  let darkClassList = [classes.Selection];
+  props.Dark ? darkClassList.push(classes.DarkSelection) : darkClassList = [classes.Selection];
 
   return (
     <Aux>
       <Backdrop show={isActive} clicked={toggleDropDown} />
       <div
         onClick={toggleDropDown}
-        className={props.Dark ? classes.Dark : classes.Dropdown}
-      >
+        className={classList.join(' ')}>
         <div className={classes.Label}>
           <p id="filter_value">Filter by Region</p>
           <i className="fas fa-angle-down"></i>
         </div>
         <div
-          className={props.Dark ? classes.DarkSelection : classes.Selection}
-          style={{ display: isActive ? "block" : "none" }}
-        >
+          className={darkClassList.join(' ')}
+          style={{ display: isActive ? "block" : "none" }}>
           <ul>
             <li onClick={() => props.handleFiltering("Africa")}>Africa</li>
             <li onClick={() => props.handleFiltering("Americas")}>Americas</li>

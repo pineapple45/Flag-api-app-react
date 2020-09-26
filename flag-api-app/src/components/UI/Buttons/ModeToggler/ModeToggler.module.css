@@ -5,6 +5,9 @@
   align-items: center;
   /* padding: 5px; */
   cursor: pointer;
+  margin-right: 5%;
+  padding: 0 20px;
+  font-size: 0.8em;
 }
 
 .ModeToggler i {
@@ -19,6 +22,9 @@
   align-items: center;
   /* padding: 5px; */
   cursor: pointer;
+  margin-right: 5%;
+  padding: 0 20px;
+  font-size: 0.8em;
 }
 
 .Dark i {

@@ -3,11 +3,10 @@ import Card from "../Cards/Card/Card";
 import classes from "./Cards.module.css";
 
 const cards = (props) => {
-  const toggler = props.Dark;
   return (
     <div className={classes.Cards}>
       {props.countries.map((country) => (
-        <Card Dark={toggler} country={country} key={country.name} />
+        <Card Dark={props.Dark} country={country} key={country.name} />
       ))}
     </div>
   );

@@ -1,18 +1,21 @@
 .CountryData {
   grid-column: 1 / 13;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
 }
 
 .CountryData img {
-  width: 80%;
+  grid-column: 2 / 12;
+  width: 100%; 
   height: auto;
 }
 
 .CountryData .Body {
-  margin: 40px 50px;
   text-align: left;
+  grid-column: 2 / 12;
 }
 
-.CountryData .cardBodyHeading {
+.CountryData .CardBodyHeading {
   color: hsl(207, 26%, 17%);
 }
 
@@ -25,29 +28,48 @@
   color: hsl(207, 26%, 17%);
 }
 
-.DarkCountryData {
-  grid-column: 1 / 13;
-}
-
-.DarkCountryData img {
-  width: 80%;
-  height: auto;
-}
-
-.DarkCountryData .DarkBody {
-  margin: 40px 50px;
-  text-align: left;
-}
-
-.DarkCountryData .DarkcardBodyHeading {
+.CountryData .DarkcardBodyHeading {
   color: hsl(0, 0%, 100%);
 }
 
-.DarkCountryData .DarkVal {
+.CountryData .DarkVal {
   color: hsl(0, 0%, 85%);
   opacity: 0.8;
 }
 
-.DarkCountryData .DarkKey {
+.CountryData .DarkKey {
   color: hsl(0, 0%, 90%);
+}
+
+
+@media screen and (min-width: 720px){
+  .CountryData {
+    grid-column: 2 / 12;
+    display: flex;
+  }
+
+  .CountryData img {
+    width: 50%;
+    height: auto;
+  }
+
+  .CountryData .Body {
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: flex-start;
+  }
+
+  .CountryData .Body h2{
+    grid-column: 1 / 9;
+    grid-auto-rows: max-content;
+  }
+
+  .CountryData .Body .Section_1{
+    grid-column: 1 / 5;
+  }
+
+  .CountryData .Body .Section_2{
+    grid-column: 6 / 9;
+  }
 }

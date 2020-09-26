@@ -5,6 +5,7 @@ html {
   padding: 0;
   background-color: hsl(0, 0%, 98%);
 }
+
 body.dark-theme {
   color: #eee;
   background: rgb(32, 45, 54);
