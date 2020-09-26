@@ -19,3 +19,26 @@
   padding: 0 20px;
   font-size: 0.8em;
 }
+
+.Dark {
+  color: #eee;
+  background-color: #2b3743;
+  grid-column: 1 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* box-shadow: 0 1px 5px 0 #2b3743; */
+}
+
+.Dark .H2 {
+  margin-left: 5%;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.Dark .DarkToggler {
+  margin-right: 5%;
+  padding: 0 20px;
+  font-size: 0.8em;
+}

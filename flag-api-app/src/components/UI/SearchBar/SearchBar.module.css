@@ -1,27 +1,58 @@
-.SearchBar{
-    grid-column: 1 / 13;
-    margin: 25px 5%;
-    border: none;
-    box-shadow: 0 2px 5px 1px rgb(224, 224, 224);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    color: rgb(195, 195, 195);
+.SearchBar {
+  grid-column: 1 / 13;
+  margin: 25px 5%;
+  border: none;
+  box-shadow: 0 2px 5px 1px rgb(224, 224, 224);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: rgb(195, 195, 195);
 }
 
-.SearchBar input{
-    width: 100%;
-    height: auto;
-    border: none;
-    padding: 15px 10px;
+.SearchBar input {
+  width: 100%;
+  height: auto;
+  border: none;
+  padding: 15px 10px;
 }
 
-.SearchBar i{
-    padding: 0 20px;
+.SearchBar i {
+  padding: 0 20px;
 }
 
-.SearchBar::placeholder{
-    color: rgb(192, 192, 192);
+.SearchBar::placeholder {
+  color: rgb(192, 192, 192);
+}
+
+.Dark {
+  grid-column: 1 / 13;
+  margin: 25px 5%;
+  border: none;
+  /* box-shadow: 0 2px 5px 1px #2b3743; */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b3743;
+  color: rgb(195, 195, 195);
+}
+
+.Dark input {
+  color: rgb(195, 195, 195);
+
+  background-color: #2b3743;
+  width: 100%;
+  height: auto;
+  border: none;
+  padding: 15px 10px;
+}
+
+.Dark i {
+  padding: 0 20px;
+}
+
+input::placeholder {
+  color: #c0c9d2;
 }

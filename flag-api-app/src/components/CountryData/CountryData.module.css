@@ -1,27 +1,53 @@
-.CountryData{
-    grid-column: 1 / 13;
+.CountryData {
+  grid-column: 1 / 13;
 }
 
 .CountryData img {
-    width: 80%;
-    height: auto;
+  width: 80%;
+  height: auto;
 }
 
-.CountryData .Body{
-    margin: 40px 50px;
-    text-align: left;
+.CountryData .Body {
+  margin: 40px 50px;
+  text-align: left;
 }
 
-.CountryData .cardBodyHeading{
-    color: hsl(207, 26%, 17%);
+.CountryData .cardBodyHeading {
+  color: hsl(207, 26%, 17%);
 }
-  
+
 .CountryData .Val {
-    color: hsl(207, 26%, 17%);
-    opacity: 0.7;
+  color: hsl(207, 26%, 17%);
+  opacity: 0.7;
 }
-  
+
 .CountryData .Key {
-    color: hsl(207, 26%, 17%);
+  color: hsl(207, 26%, 17%);
 }
-  
+
+.DarkCountryData {
+  grid-column: 1 / 13;
+}
+
+.DarkCountryData img {
+  width: 80%;
+  height: auto;
+}
+
+.DarkCountryData .DarkBody {
+  margin: 40px 50px;
+  text-align: left;
+}
+
+.DarkCountryData .DarkcardBodyHeading {
+  color: hsl(0, 0%, 100%);
+}
+
+.DarkCountryData .DarkVal {
+  color: hsl(0, 0%, 85%);
+  opacity: 0.8;
+}
+
+.DarkCountryData .DarkKey {
+  color: hsl(0, 0%, 90%);
+}
