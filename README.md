@@ -2,6 +2,8 @@
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
+## Live Preview: https://flag-api-app.netlify.app/
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
