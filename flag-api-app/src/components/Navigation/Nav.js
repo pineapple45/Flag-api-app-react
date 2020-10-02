@@ -9,8 +9,6 @@ const nav = (props) => {
       <ModeToggler
         Dark={props.Dark}
         setDark={props.setDark}
-        // class={classes.Toggler}
-        // Darkclass={classes.DarkToggler}
       />
     </nav>
   );

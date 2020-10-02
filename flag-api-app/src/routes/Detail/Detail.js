@@ -31,7 +31,7 @@ class Detail extends Component {
             Dark={this.props.Dark}
             countryData={this.state.countryData}
           />
-          <BorderCountries countryData={this.state.countryData} />
+          {/* <BorderCountries countryData={this.state.countryData} /> */}
         </Aux>
       );
     }

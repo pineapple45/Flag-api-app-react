@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classes from "./CountryData.module.css";
+import BorderCountries from '../BorderCountries/BorderCountries';
 
 class countryData extends Component {
   render() {
@@ -125,6 +126,9 @@ class countryData extends Component {
               </span>
             </h5>
           </div>
+
+          <BorderCountries countryData={this.props.countryData}/>
+       
         </div>
       </div>
     );
