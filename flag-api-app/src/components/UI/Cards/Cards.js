@@ -1,47 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "../Cards/Card/Card";
 import classes from "./Cards.module.css";
 
-class Cards extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      countries: [],
-    };
-  }
+const cards = (props) => {
+  return (
+    <div className={classes.Cards}>
+      {props.countries.map((country) => (
+        <Card Dark={props.Dark} country={country} key={country.name} />
+      ))}
+    </div>
+  );
+};
 
-  // const fs = () => {
-  //     setState({
-
-  //     })
-  // }
-
-  //state for cards will be managed here
-  // setState({});
-
-  //http get request will be handled here
-  componentDidMount() {
-    console.log("CARDS CALLED");
-    fetch("https://restcountries.eu/rest/v2/all")
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState(() => {
-          return {
-            countries: data,
-          };
-        });
-      });
-  }
-
-  render() {
-    return (
-      <div className={classes.grid}>
-        {this.state.countries.map((country) => (
-          <Card country={country} key={country.name} />
-        ))}
-      </div>
-    );
-  }
-}
-
-export default Cards;
+export default cards;

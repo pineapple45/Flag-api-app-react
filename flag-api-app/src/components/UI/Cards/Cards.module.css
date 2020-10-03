@@ -1,5 +1,13 @@
-.grid {
-  margin-top: 5vh;
+.Cards {
+  margin: 5vh auto;
+  grid-column: 1 / 13;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12,1fr);
+  gap: 30px;
+}
+
+@media screen and (min-width: 720px){
+  .Cards {
+    gap: 60px;
+  }
 }

@@ -1,28 +1,75 @@
-/* .div {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  /* grid-column: 1 / 13; */
-
+.Card {
+  height: auto;
+  width: 75vw;
+  padding-bottom: 2vh;
+  margin: 0 auto;
+  box-shadow: 0 1px 5px 0 hsl(0, 0%, 75%);
+  grid-column: 1 / 13;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* 
 .div {
   /* width: auto;
   height: auto; */
-  /* display: flex;
+/* display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: start;
-  align-items: center; */
+  align-items: center; */ /*
   margin: 20px;
   border: 1px solid black;
 
   height: 50vh;
   width: 30vh;
-  /* border: 1px solid black;
+} /*
+/* border: 1px solid black;
   margin: 20px;  */
+.Card .CardBody {
+  text-align: left;
+  padding-left: 20px;
 }
 
-.img {
+.Card .img {
   height: 50%;
   width: 100%;
   vertical-align: top;
+}
+
+.Card .CardBodyHeading {
+  color: hsl(207, 26%, 17%);
+}
+
+.Card .Val {
+  color: hsl(207, 26%, 17%);
+  opacity: 0.7;
+}
+
+.Card .Key {
+  color: hsl(207, 26%, 17%);
+}
+
+.Dark {
+  background: #2b3743;
+  box-shadow: 0 1px 5px 0 #2b3743;
+}
+
+.Dark .DarkcardBodyHeading {
+  color: hsl(0, 0%, 100%);
+}
+
+.Dark .DarkVal {
+  color: hsl(0, 0%, 85%);
+  opacity: 0.8;
+}
+
+.Dark .DarkKey {
+  color: hsl(0, 0%, 90%);
+}
+
+@media screen and (min-width: 720px) {
+  .Card {
+    width: 18vw;
+    grid-column: span 3;
+  }
 }

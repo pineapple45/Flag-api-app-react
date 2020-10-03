@@ -1,0 +1,6 @@
+.Loader{
+    grid-column: 1 / 13;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(151, 119, 255);
+}

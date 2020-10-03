@@ -1,12 +1,32 @@
-.ModeToggler{
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 5px; */
-    cursor: pointer;
+.ModeToggler {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5px; */
+  cursor: pointer;
+  margin-right: 5%;
+  padding: 0 20px;
+  font-size: 0.8em;
 }
 
 .ModeToggler i {
-    margin-right: 5px;
+  margin-right: 5px;
+}
+/*   background-color: #202d36;
+ */
+.Dark {
+  background-color: #2b3743;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5px; */
+  cursor: pointer;
+  margin-right: 5%;
+  padding: 0 20px;
+  font-size: 0.8em;
+}
+
+.Dark i {
+  margin-right: 5px;
 }
