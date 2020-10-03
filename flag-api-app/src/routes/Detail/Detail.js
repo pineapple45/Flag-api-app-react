@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Aux from "../../Auxilliary/Auxilliary";
 import BackButton from "../../components/UI/Buttons/BackButton/BackButton";
 import CountryData from "../../components/CountryData/CountryData";
-import BorderCountries from "../../components/BorderCountries/BorderCountries";
+// import BorderCountries from "../../components/BorderCountries/BorderCountries";
 import Loader from "../../components/UI/Loader/Loader";
 
 class Detail extends Component {
