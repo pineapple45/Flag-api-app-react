@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./SearchBar.module.css";
 const SearchBar = (props) => {
   let inputText = null;
-  console.log("searchbar", props.Dark);
+ // console.log("searchbar", props.Dark);
   const onChangeHandler = (e) => {
     inputText = e.target.value.toLowerCase();
     props.handleInputSearch(inputText);
@@ -10,6 +10,9 @@ const SearchBar = (props) => {
 
   let classList = [classes.SearchBar];
   props.Dark ? classList.push(classes.Dark) : classList = [classes.SearchBar]; 
+
+  //console.log("searchbar",props.position)
+  // window.scrollTo(0,props.position)
 
   return (
     <div className={classList.join(' ')}>

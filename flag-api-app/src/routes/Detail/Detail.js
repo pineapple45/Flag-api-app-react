@@ -11,7 +11,7 @@ class Detail extends Component {
   };
   componentDidMount() {
     const countryName = this.props.match.params.name;
-
+    //console.log(this.props.location.props.position,"INSIDE")
     fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
       .then((data) => data.json())
       .then((countryData) => {
@@ -37,7 +37,7 @@ class Detail extends Component {
     }
     return (
       <Aux>
-        <BackButton Dark={this.props.Dark} />
+        <BackButton position={this.props.location.props.position} Dark={this.props.Dark} />
         {loadedData}
       </Aux>
     );

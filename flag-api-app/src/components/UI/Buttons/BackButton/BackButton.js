@@ -7,7 +7,7 @@ const backButton = (props) => {
   props.Dark ? classList.push(classes.DarkBackButton) : classList = [classes.BackButton];
 
   return (
-    <Link to="/" className={classList.join(' ')}>
+    <Link to={{pathname: "/", props: {position: props.position}}} className={classList.join(' ')}>
       <i className="fas fa-long-arrow-alt-left"></i>
       Back
     </Link>
