@@ -25,18 +25,11 @@ const Card = (props) => {
   let keyClassList = [classes.Key];
   props.Dark ? keyClassList.push(classes.DarkKey) : keyClassList = [classes.Key];
 
-  // console.log(props.position,"Card")
-
- // const history = useHistory();
-  //history.push(`/${props.country.name}`,props.position)
-
   return (
     <NavLink
     to={{pathname: `/${props.country.name}`,props:{
          position:props.position
     }}}
-      // to={`/${props.country.name}`}
-      // position={props.position}
       className={classList.join(' ')}
     >
       <div>

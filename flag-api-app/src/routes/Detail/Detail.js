@@ -11,7 +11,6 @@ class Detail extends Component {
   };
   componentDidMount() {
     const countryName = this.props.match.params.name;
-    //console.log(this.props.location.props.position,"INSIDE")
     fetch(`https://restcountries.eu/rest/v2/name/${countryName}`)
       .then((data) => data.json())
       .then((countryData) => {
