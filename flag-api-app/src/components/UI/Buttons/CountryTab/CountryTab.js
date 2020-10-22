@@ -7,7 +7,7 @@ const countryTab = (props) => {
   props.Dark ? classList.push(classes.DarkCountryTab) : classList = [classes.CountryTab];
 
   return (
-    <Link className={classList.join(' ')}>
+    <Link to={""} className={classList.join(' ')}>
       {props.country}
     </Link>
   );

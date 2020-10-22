@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./SearchBar.module.css";
 const SearchBar = (props) => {
-  let inputText = null;
+  let inputText;
  // console.log("searchbar", props.Dark);
   const onChangeHandler = (e) => {
     inputText = e.target.value.toLowerCase();
