@@ -87,6 +87,13 @@ class countryData extends Component {
                 {this.props.countryData.capital}
               </span>
             </h5>
+            {this.props.cases &&  <h5><span className={keyClassList.join(' ')} id={classes.under}>COVID 19</span> <br></br> <br></br>
+            <span className={keyClassList.join(' ')}>Confirmed: </span><span className={valueClassList.join(' ')}>{numberWithCommas(this.props.cases.confirmed)}</span><br></br>
+            <span className={keyClassList.join(' ')}>Recovered: </span><span className={valueClassList.join(' ')}>{numberWithCommas(this.props.cases.recovered)}</span><br></br>
+            <span className={keyClassList.join(' ')}>Deaths: </span><span className={valueClassList.join(' ')}>{numberWithCommas(this.props.cases.deaths)}</span>
+            </h5>
+            }
+           
           </div>
 
           <br />

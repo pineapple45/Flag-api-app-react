@@ -12,7 +12,8 @@ class Home extends Component {
     this.state = {
       countries: [],
       filteredCountries: [],
-      position: 0
+      position: 0,
+      cases: []
     };
   }
 
@@ -45,7 +46,7 @@ class Home extends Component {
     fetch("https://restcountries.eu/rest/v2/all")
       .then((res) => res.json())
       .then((data) => {
-        // console.log("DONE")
+        // console.log(data)
         this.setState(() => {
           return {
             countries: data,
@@ -53,6 +54,15 @@ class Home extends Component {
           };
         });
       });
+
+      fetch("https://cors-anywhere.herokuapp.com/https://covid-api.mmediagroup.fr/v1/cases").then((res) => res.json()).then((data) => {
+       console.log(data)  
+      this.setState(() => {
+          return {
+            cases: data
+          }
+        })
+      })
 
     window.addEventListener("scroll", this.handleScroll, { passive: true });
 
@@ -94,6 +104,7 @@ class Home extends Component {
           Dark={this.props.Dark}
           setDark={this.props.setDark}
           countries={this.state.filteredCountries}
+          cases={this.state.cases}
         />
       </Aux>
     );

@@ -28,7 +28,8 @@ const Card = (props) => {
   return (
     <NavLink
     to={{pathname: `/${props.country.name}`,props:{
-         position:props.position
+         position:props.position,
+         cases: props.cases
     }}}
       className={classList.join(' ')}
     >
