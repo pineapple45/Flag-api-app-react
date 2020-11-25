@@ -41,6 +41,12 @@
   color: hsl(0, 0%, 90%);
 }
 
+#under {
+  text-decoration: underline;
+  font-weight: bold;
+  color: crimson;
+}
+
 @media screen and (min-width: 720px) {
   .CountryData {
     grid-column: 2 / 12;
@@ -48,19 +54,19 @@
   }
 
   .CountryData img {
-    width: 50%;
-    height: auto;
+    width: 45%;
+    height: 50%;
   }
 
   .CountryData .Body {
-    margin: 0 10%;
+    margin: 0 3%;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     justify-items: flex-start;
   }
 
   .CountryData .Body h2 {
-    grid-column: 1 / 9;
+    grid-column: 1 / 13;
     grid-auto-rows: max-content;
   }
 
@@ -72,11 +78,11 @@
     grid-column: 6 / 9;
   }
 
-  /* .CountryData .Body .BorderCountries{
-    grid-column: 1 / 9;
-  }  */
-}
+  .CountryData .Body .Section_3 {
+    grid-column: 10 / 13;
+  }
 
-#under {
-  text-decoration: underline;
+  .CountryData .Body .BorderCountries {
+    grid-column: 1 / 13;
+  }
 }
