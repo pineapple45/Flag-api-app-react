@@ -12,11 +12,14 @@ class Detail extends Component {
   };
   componentDidMount() {
     const countryName = this.props.match.params.name;
-    if (countryName in this.props.location.props.cases) {
+    let persistantData = JSON.parse(localStorage.getItem("persistantData"));
+    let cases = persistantData.casesData;
+    if (countryName in cases) {
       this.setState(() => {
         return {
           ...this.state,
-          cases: this.props.location.props.cases[countryName].All,
+          //cases: this.props.location.props.cases[countryName].All,
+          cases: cases[countryName].All,
         };
       });
     } else console.log("false");
@@ -51,7 +54,11 @@ class Detail extends Component {
     return (
       <Aux>
         <BackButton
-          position={this.props.location.props.position}
+          position={
+            this.props.location.props === undefined
+              ? 0
+              : this.props.location.props.position
+          }
           Dark={this.props.Dark}
         />
         {loadedData}

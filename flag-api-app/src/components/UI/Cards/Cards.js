@@ -10,7 +10,7 @@ const cards = (props) => {
           position={props.position}
           Dark={props.Dark}
           country={country}
-          cases={props.cases}
+          //cases={props.cases}
           key={country.name}
         />
       ))}

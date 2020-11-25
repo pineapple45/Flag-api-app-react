@@ -41,13 +41,30 @@ class Home extends Component {
     document.getElementById("filter_value").innerHTML = region;
   };
 
+  handleScroll() {
+    localStorage.setItem(
+      "persistantData",
+      JSON.stringify({
+        position: window.scrollY,
+        casesData: this.state.cases,
+      })
+    );
+
+    this.setState(() => {
+      return {
+        ...this.state,
+        position: window.scrollY,
+      };
+    });
+  }
+
   componentDidMount() {
     fetch("https://restcountries.eu/rest/v2/all")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data)
         this.setState(() => {
           return {
+            ...this.state,
             countries: data,
             filteredCountries: data,
           };
@@ -61,34 +78,35 @@ class Home extends Component {
       .then((data) => {
         this.setState(() => {
           return {
+            ...this.state,
             cases: data,
           };
         });
       });
 
     window.addEventListener("scroll", this.handleScroll, { passive: true });
+    localStorage.setItem(
+      "persistantData",
+      JSON.stringify({
+        position: this.state.position,
+        casesData: this.state.cases,
+      })
+    );
   }
 
   componentDidUpdate() {
+    let persistantData = JSON.parse(localStorage.getItem("persistantData"));
     if (this.props.location.props) {
-      // console.log("RPINTE",this.props.location.props.position)
       window.scrollTo(0, this.props.location.props.position);
       this.props.location.props = null;
+    } else {
+      if (persistantData) {
+        window.scrollTo(0, persistantData.position);
+      }
     }
   }
 
-  handleScroll(event) {
-    this.setState(() => {
-      return {
-        position: window.scrollY,
-      };
-    });
-    console.log(this.state.position);
-  }
-
   render() {
-    let countryCards = <Loader />;
-
     return (
       <Aux>
         <SearchBar
@@ -107,19 +125,11 @@ class Home extends Component {
             Dark={this.props.Dark}
             setDark={this.props.setDark}
             countries={this.state.filteredCountries}
-            cases={this.state.cases}
+            //cases={this.state.cases}
           />
         ) : (
           <Loader />
         )}
-
-        {/* <Cards
-            position={this.state.position}
-            Dark={this.props.Dark}
-            setDark={this.props.setDark}
-            countries={this.state.filteredCountries}
-            cases={this.state.cases}
-          /> */}
       </Aux>
     );
   }
