@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Live Preview: https://flag-api-app.netlify.app/
+## Live Preview: https://flag-api-app-react.vercel.app/
 
 ## Available Scripts
 
